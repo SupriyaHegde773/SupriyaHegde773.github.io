@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #d7a1f9, #fbc2eb)	
+  background: linear-gradient(135deg, #2b2e4a, #4b3869); /* deep muted purple */
   color: #fff;
   min-height: 100vh;
   background-attachment: fixed;
@@ -21,16 +21,16 @@ nav {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem 0;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 nav a {
-  color: #fff;
+  color: #f8f8f8;
   font-weight: 600;
   text-decoration: none;
   padding: 0.4rem 0.8rem;
@@ -40,7 +40,7 @@ nav a {
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #00ffe7;
+  color: #a3ffe1;
 }
 
 /* Container */
@@ -55,27 +55,27 @@ nav a:hover {
 
 /* Glassmorphic card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
   padding: 2rem;
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 
 .glass-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 /* Typography */
 h1, h2, h3 {
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 0.8rem;
 }
 
 p, li {
-  color: #e0e0e0;
+  color: #dddddd;
 }
 
 ul {
@@ -83,7 +83,34 @@ ul {
 }
 
 a {
-  color: #00ffe7;
+  color: #9bf3f0;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: start;
+  margin-top: 1.2rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 0.6rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
 }
 
 /* Responsive */
@@ -96,21 +123,9 @@ a {
   .container {
     padding: 1rem;
   }
-.social-icons {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  margin-top: 1rem;
-}
 
-.social-icons a img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease;
-}
-
-.social-icons a:hover img {
-  transform: scale(1.1);
-}
-
+  .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
