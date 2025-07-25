@@ -7,12 +7,13 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #2b2e4a, #4b3869); /* deep muted purple */
+  background: linear-gradient(135deg, #2b2e4a, #4b3869);
   color: #fff;
   min-height: 100vh;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
+  cursor: url('https://cdn-icons-png.flaticon.com/512/892/892692.png'), auto;
 }
 
 /* Navigation Bar */
@@ -62,6 +63,10 @@ nav a:hover {
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+  min-height: 300px;           /* Ensures same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .glass-card:hover {
@@ -113,22 +118,8 @@ a {
   height: 28px;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .container {
-    padding: 1rem;
-  }
-
-  .social-icons {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .hero {
+/* Hero Section */
+.hero {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,10 +145,6 @@ a {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
-/* Cursor */
-body {
-  cursor: url('https://cdn-icons-png.flaticon.com/512/892/892692.png'), auto;
-}
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
@@ -171,4 +158,27 @@ body {
   border-radius: 10px;
 }
 
+/* Responsive */
+@media screen and (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .glass-card {
+    min-height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
 }
