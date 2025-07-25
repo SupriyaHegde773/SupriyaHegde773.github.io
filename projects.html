@@ -34,36 +34,14 @@
       display: none;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .tab-content.active {
       display: flex;
     }
 
-    .project-card {
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 18px;
-      padding: 2rem;
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      max-width: 680px;
-      min-height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .project-card img {
+    .glass-card img.project-image {
       width: 100%;
       max-height: 150px;
       object-fit: cover;
@@ -71,19 +49,19 @@
       margin-bottom: 1rem;
     }
 
-    .project-card h2 {
-      margin: 0.8rem 0 0.5rem;
+    .glass-card h2 {
+      text-align: center;
       font-size: 1.3rem;
-      color: #fff;
+      margin-bottom: 0.8rem;
     }
 
-    .project-card p {
-      color: #ddd;
+    .glass-card p {
+      text-align: center;
       font-size: 0.95rem;
     }
 
     @media screen and (max-width: 600px) {
-      .project-card {
+      .glass-card {
         padding: 1.2rem;
       }
     }
@@ -107,33 +85,33 @@
     </div>
 
     <div id="academic" class="tab-content active">
-      <div class="project-card">
-        <img src="assets/biometric.jpeg" alt="Biometric Watermarking">
+      <div class="glass-card">
+        <img src="assets/biometric.jpeg" alt="Biometric Watermarking" class="project-image">
         <h2>Biometric Watermarking using Deep Learning</h2>
         <p>Embedded fingerprint data into iris images using DWT, DCT, and SVD for secure, attack-resistant watermarking in digital ID, medical records, and copyright protection.</p>
       </div>
 
-      <div class="project-card">
-        <img src="assets/social media analytics.jpg" alt="Social Media Analytics">
+      <div class="glass-card">
+        <img src="assets/social media analytics.jpg" alt="Social Media Analytics" class="project-image">
         <h2>Real-Time Social Media Analytics Pipeline</h2>
         <p>Built a pipeline for real-time social sentiment analysis and topic modeling. Optimized using Grid Search & Flask API for deployment.</p>
       </div>
 
-      <div class="project-card">
-        <img src="assets/brain tumor.png" alt="Brain Tumor Detection">
+      <div class="glass-card">
+        <img src="assets/brain tumor.png" alt="Brain Tumor Detection" class="project-image">
         <h2>Brain Tumor Detection using ML</h2>
         <p>Developed a CNN with OpenCV preprocessing to detect tumors from MRI scans. GUI built with PyQt5 for interactive prediction.</p>
       </div>
 
-      <div class="project-card">
-        <img src="assets/Movie booking.jpg" alt="Movie Booking System">
+      <div class="glass-card">
+        <img src="assets/Movie booking.jpg" alt="Movie Booking System" class="project-image">
         <h2>Movie Ticket Booking System</h2>
         <p>Created a Django + MySQL system with full CRUD, user login, and movie schedule management for streamlined ticket booking.</p>
       </div>
     </div>
 
     <div id="personal" class="tab-content">
-      <div class="project-card">
+      <div class="glass-card">
         <h2>Coming Soon!</h2>
         <p>Your personal projects will be added here later.</p>
       </div>
