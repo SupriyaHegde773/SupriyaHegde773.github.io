@@ -52,9 +52,10 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 }
 
-/* Glassmorphic card */
+/* Glassmorphic card (uniform size) */
 .glass-card {
   background: rgba(255, 255, 255, 0.06);
   border-radius: 18px;
@@ -62,21 +63,20 @@ nav a:hover {
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-  min-height: 300px;           /* Ensures same height */
+  width: 100%;
+  max-width: 680px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.glass-card:hover {
-  transform: translateY(-4px);
+  text-align: center;
 }
 
 /* Typography */
 h1, h2, h3 {
   color: #ffffff;
   margin-bottom: 0.8rem;
+  text-align: center;
 }
 
 p, li {
@@ -85,6 +85,7 @@ p, li {
 
 ul {
   padding-left: 1.5rem;
+  text-align: left;
 }
 
 a {
@@ -96,7 +97,7 @@ a {
   display: flex;
   gap: 1.2rem;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   margin-top: 1.2rem;
 }
 
@@ -116,34 +117,6 @@ a {
 .social-icons img {
   width: 28px;
   height: 28px;
-}
-
-/* Hero Section */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-}
-
-.hero-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-.hero-text {
-  max-width: 500px;
-}
-
-.hero-text h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
 }
 
 /* Scrollbar styling */
@@ -169,16 +142,12 @@ a {
     padding: 1rem;
   }
 
-  .social-icons {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
   .glass-card {
+    padding: 1.2rem;
     min-height: auto;
   }
 
-  .hero-text h1 {
-    font-size: 1.6rem;
+  .social-icons {
+    flex-wrap: wrap;
   }
 }
