@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <title>Supriya | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 <body>
   <nav>
     <a href="index.html">Home</a>
@@ -14,21 +17,29 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <section class="hero">
+  <img src="assets/profile.jpg" alt="Supriya's photo" class="hero-img" />
+  <div class="hero-text">
+    <h1>Hi, I'm Supriya 👩‍💻</h1>
+    <p>Frontend Developer & Lifelong Learner passionate about elegant UI and clean code.</p>
+  </div>
+</section>
+
   <div class="container">
     <h1>Hello, I'm Supriya 👋</h1>
     <p>Welcome to my personal portfolio website.</p>
 
-    <div class="glass-card">
+    <div class="glass-card" data-aos="fade-up">
       <h2>Experience</h2>
       <p>Junior Developer at XYZ Corp (2023–Present)</p>
     </div>
 
-    <div class="glass-card">
+    <div class="glass-card" data-aos="fade-up">
       <h2>Education</h2>
       <p>Bachelor of Technology in Computer Science</p>
     </div>
 
-    <div class="glass-card">
+    <div class="glass-card" data-aos="fade-up">
       <h2>Skills</h2>
       <ul>
         <li>React, JavaScript, HTML, CSS</li>

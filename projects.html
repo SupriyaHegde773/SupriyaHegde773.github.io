@@ -4,8 +4,44 @@
   <meta charset="UTF-8">
   <title>Projects</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .tab-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .tab-buttons button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+    .tab-buttons button.active {
+      background-color: #00ffe7;
+      color: #000;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .project-image {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -15,16 +51,54 @@
   </nav>
 
   <div class="container">
-    <div class="glass-card">
-      <h2>SkillSpark</h2>
-      <p>A React Native app that aggregates courses from Coursera, edX, and Udemy with a personalized learning roadmap.</p>
-      <a href="https://github.com/yourusername/skillspark" target="_blank">View on GitHub</a>
+    <h1 data-aos="fade-down">Projects</h1>
+
+    <div class="tab-buttons">
+      <button onclick="showTab('academic')" id="academicTab" class="active">Academic Projects</button>
+      <button onclick="showTab('personal')" id="personalTab">Personal Projects</button>
     </div>
 
-    <div class="glass-card">
-      <h2>MyLearningApp</h2>
-      <p>An app with interest quiz, learning preferences, and course suggestions. Built with React Native + AWS Amplify.</p>
+    <div id="academic" class="tab-content active">
+      <div class="glass-card" data-aos="fade-up">
+        <img src="assets/biometric.jpeg" alt="Biometric Watermarking" class="project-image">
+        <h2>Biometric Watermarking using Deep Learning</h2>
+        <p>Developed a biometric watermarking system embedding fingerprint data into iris images for secure, keyless authentication. Implemented DWT, DCT, and SVD techniques to ensure robust watermarks resistant to attacks. Designed for use in digital IDs, medical records, and copyright protection.</p>
+      </div>
+
+      <div class="glass-card" data-aos="fade-up">
+        <img src="assets/social media analytics.jpg" alt="Social Media Analytics" class="project-image">
+        <h2>Real-Time Social Media Analytics Pipeline</h2>
+        <p>Developed a real-time data processing framework for social media analytics. Implemented sentiment analysis, text clustering, and topic modeling. Deployed the trained model using Flask API and optimized performance using Grid Search and Cross-Validation.</p>
+      </div>
+
+      <div class="glass-card" data-aos="fade-up">
+        <img src="assets/brain tumor.png" alt="Brain Tumor Detection" class="project-image">
+        <h2>Brain Tumor Detection using Machine Learning</h2>
+        <p>Developed a CNN-based model to classify brain tumors from MRI scans. Used OpenCV for image preprocessing and PyQt5 for creating an interactive GUI to load images and generate predictions.</p>
+      </div>
+
+      <div class="glass-card" data-aos="fade-up">
+        <img src="assets/Movie booking.jpg" alt="Movie Ticket Booking System" class="project-image">
+        <h2>Movie Ticket Booking System</h2>
+        <p>Built a Django + MySQL based movie ticket booking system. Included CRUD operations and user authentication. Designed for managing bookings and movie schedules efficiently.</p>
+      </div>
+    </div>
+
+    <div id="personal" class="tab-content">
+      <div class="glass-card" data-aos="fade-up">
+        <h2>Coming Soon!</h2>
+        <p>Your personal projects will be added here later.</p>
+      </div>
     </div>
   </div>
+
+  <script>
+    function showTab(tab) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelector(`#${tab}`).classList.add('active');
+      document.querySelectorAll('.tab-buttons button').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`#${tab}Tab`).classList.add('active');
+    }
+  </script>
 </body>
 </html>
