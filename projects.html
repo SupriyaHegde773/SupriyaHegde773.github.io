@@ -9,17 +9,20 @@
     .tab-buttons {
       display: flex;
       gap: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .tab-buttons button {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.2rem;
       border: none;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.08);
       color: #fff;
       cursor: pointer;
       backdrop-filter: blur(8px);
       border-radius: 8px;
+      font-weight: 500;
       transition: 0.3s ease;
     }
 
@@ -33,29 +36,54 @@
     }
 
     .tab-content.active {
-      display: block;
-    }
-
-    .project-image {
-      max-width: 100%;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .project-card {
-      min-height: 340px;
-      max-height: 360px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-card h2 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.3rem;
+      color: #fff;
+    }
+
+    .project-card p {
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+
+    .project-image {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
     }
 
     @media screen and (max-width: 600px) {
       .project-card {
-        min-height: auto;
-        max-height: none;
+        padding: 1rem;
       }
     }
   </style>
@@ -70,7 +98,7 @@
   </nav>
 
   <div class="container">
-    <h1 data-aos="fade-down">Projects</h1>
+    <h1 data-aos="fade-down" style="text-align: center; margin-bottom: 1rem;">Projects</h1>
 
     <div class="tab-buttons">
       <button onclick="showTab('academic')" id="academicTab" class="active">Academic Projects</button>
@@ -78,33 +106,33 @@
     </div>
 
     <div id="academic" class="tab-content active">
-      <div class="glass-card project-card" data-aos="fade-up">
+      <div class="project-card" data-aos="fade-up">
         <img src="assets/biometric.jpeg" alt="Biometric Watermarking" class="project-image">
         <h2>Biometric Watermarking using Deep Learning</h2>
         <p>Embedded fingerprint data into iris images using DWT, DCT, and SVD for secure, attack-resistant watermarking in digital ID, medical records, and copyright protection.</p>
       </div>
 
-      <div class="glass-card project-card" data-aos="fade-up">
-        <img src="assets/social media analytics.jpg" alt="Social Media Analytics" class="project-image">
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/social_media_analytics.jpg" alt="Social Media Analytics" class="project-image">
         <h2>Real-Time Social Media Analytics Pipeline</h2>
         <p>Built a pipeline for real-time social sentiment analysis and topic modeling. Optimized using Grid Search & Flask API for deployment.</p>
       </div>
 
-      <div class="glass-card project-card" data-aos="fade-up">
-        <img src="assets/brain tumor.png" alt="Brain Tumor Detection" class="project-image">
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/brain_tumor.png" alt="Brain Tumor Detection" class="project-image">
         <h2>Brain Tumor Detection using ML</h2>
-        <p>Developed a model with OpenCV preprocessing to detect tumors from MRI scans. GUI built with PyQt5 for interactive prediction.</p>
+        <p>Developed a CNN with OpenCV preprocessing to detect tumors from MRI scans. GUI built with PyQt5 for interactive prediction.</p>
       </div>
 
-      <div class="glass-card project-card" data-aos="fade-up">
-        <img src="assets/Movie booking.jpg" alt="Movie Booking System" class="project-image">
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/movie_booking.jpg" alt="Movie Booking System" class="project-image">
         <h2>Movie Ticket Booking System</h2>
-        <p>Created a MySQL system with full CRUD, user login, and movie schedule management for streamlined ticket booking.</p>
+        <p>Created a Django + MySQL system with full CRUD, user login, and movie schedule management for streamlined ticket booking.</p>
       </div>
     </div>
 
     <div id="personal" class="tab-content">
-      <div class="glass-card project-card" data-aos="fade-up">
+      <div class="project-card" data-aos="fade-up">
         <h2>Coming Soon!</h2>
         <p>Your personal projects will be added here later.</p>
       </div>
