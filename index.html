@@ -81,59 +81,6 @@
       margin-bottom: 40px;
     }
 
-    /* Intro Animation Section */
-    .intro-scene {
-      position: relative;
-      height: 280px;
-      overflow: visible;
-      margin-bottom: 2rem;
-    }
-
-    .girl {
-      width: 130px;
-      position: absolute;
-      bottom: 0;
-      left: -150px;
-      opacity: 0;
-      animation: walkIn 3s forwards ease-out;
-    }
-
-    @keyframes walkIn {
-      0% { left: -150px; opacity: 0; }
-      40% { opacity: 1; }
-      100% { left: 80px; opacity: 1; }
-    }
-
-    /* Pixelated speech bubble */
-    .speech-wrapper {
-      position: absolute;
-      bottom: 130px;
-      left: 220px;
-      width: 220px;
-      height: 200px;
-      background: url("assets/psbr.png") no-repeat center/contain;
-      opacity: 0;
-      animation: showBubble 1s forwards;
-      animation-delay: 3s;
-    }
-
-    .speech-text {
-      position: absolute;
-      top: 30px;
-      left: 20px;
-      right: 20px;
-      font-family: 'Courier New', monospace;
-      font-size: 0.9rem;
-      color: #00ffff;
-      white-space: pre-wrap;
-      text-align: center;
-      line-height: 1.4;
-    }
-
-    @keyframes showBubble {
-      to { opacity: 1; }
-    }
-
     .glass-card {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
@@ -175,14 +122,12 @@
     }
 
     @media (max-width: 600px) {
-      .speech-wrapper {
-        left: 130px;
-        width: 180px;
-        height: 160px;
+      h1 {
+        font-size: 2rem;
       }
-      .speech-text {
-        font-size: 0.75rem;
-        top: 20px;
+
+      .glass-card {
+        padding: 1.5rem;
       }
     }
   </style>
@@ -197,15 +142,6 @@
   </nav>
 
   <div class="container">
-    <div class="intro-scene">
-      <img class="girl" src="assets/pixelme.png" alt="Girl walking in" />
-      <div class="speech-wrapper">
-        <div class="speech-text" id="speechText">
-          <!-- typing effect here -->
-        </div>
-      </div>
-    </div>
-
     <h1>Hello, I'm Supriya 👋</h1>
     <p>Welcome to my personal portfolio website.</p>
 
@@ -234,23 +170,5 @@
       </ul>
     </div>
   </div>
-
-  <script>
-    const text = "Hello, I'm Supriya.\nWelcome to my personal portfolio website.";
-    const speechText = document.getElementById("speechText");
-    let index = 0;
-
-    function typeText() {
-      if (index < text.length) {
-        speechText.textContent += text[index];
-        index++;
-        setTimeout(typeText, 40);
-      }
-    }
-
-    setTimeout(() => {
-      typeText();
-    }, 3000);
-  </script>
 </body>
 </html>
