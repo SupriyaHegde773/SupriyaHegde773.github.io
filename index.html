@@ -4,6 +4,63 @@
   <meta charset="UTF-8" />
   <title>Supriya | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .intro-scene {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .girl {
+      width: 120px;
+      position: absolute;
+      bottom: 0;
+      left: -150px;
+      animation: walkIn 4s ease-out forwards;
+    }
+
+    @keyframes walkIn {
+      0% { left: -150px; opacity: 0; }
+      40% { left: 50px; opacity: 1; }
+      100% { left: 80px; }
+    }
+
+    .speech-bubble {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 16px;
+      padding: 1rem 1.5rem;
+      color: #fff;
+      max-width: 300px;
+      position: absolute;
+      left: 220px;
+      bottom: 110px;
+      backdrop-filter: blur(12px);
+      opacity: 0;
+      animation: showBubble 1s ease-in 3.5s forwards;
+    }
+
+    @keyframes showBubble {
+      to { opacity: 1; }
+    }
+
+    .speech-bubble::after {
+      content: "";
+      position: absolute;
+      left: -12px;
+      bottom: 20px;
+      border: 10px solid transparent;
+      border-right-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .container h1,
+    .container > p {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -15,8 +72,16 @@
   </nav>
 
   <div class="container">
-    <h1>Hello, I'm Supriya 👋</h1>
-    <p>Welcome to my personal portfolio website.</p>
+    <div class="intro-scene">
+      <!-- Simple animated girl SVG -->
+      <img class="girl" src="https://www.svgrepo.com/show/522544/woman-avatar.svg" alt="Girl Avatar" />
+
+      <!-- Speech Bubble -->
+      <div class="speech-bubble">
+        Hello, I'm Supriya.<br />
+        Welcome to my personal portfolio website.
+      </div>
+    </div>
 
     <div class="glass-card">
       <h2>💼 Experience</h2>
@@ -28,7 +93,7 @@
     <div class="glass-card">
       <h2>🎓 Education</h2>
       <p>Bachelor of Engineering in Computer Science</p>
-      <p>VTU,India</p>
+      <p>VTU, India</p>
       <p>GPA: 3.6</p>
     </div>
 
