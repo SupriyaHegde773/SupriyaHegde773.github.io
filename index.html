@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Supriya | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
@@ -13,6 +14,7 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
       background: rgba(255, 255, 255, 0.05);
@@ -20,12 +22,20 @@
       padding: 1rem;
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
     }
 
     .container {
@@ -34,14 +44,16 @@
       padding: 1rem;
     }
 
+    /* Girl Animation Section */
     .intro-scene {
       position: relative;
       height: 280px;
       overflow: hidden;
+      margin-bottom: 2rem;
     }
 
     .girl {
-      width: 120px;
+      width: 130px;
       position: absolute;
       bottom: 0;
       left: -150px;
@@ -50,17 +62,9 @@
     }
 
     @keyframes walkIn {
-      0% {
-        left: -150px;
-        opacity: 0;
-      }
-      40% {
-        opacity: 1;
-      }
-      100% {
-        left: 80px;
-        opacity: 1;
-      }
+      0% { left: -150px; opacity: 0; }
+      40% { opacity: 1; }
+      100% { left: 80px; opacity: 1; }
     }
 
     .speech-bubble {
@@ -81,9 +85,7 @@
     }
 
     @keyframes showBubble {
-      to {
-        opacity: 1;
-      }
+      to { opacity: 1; }
     }
 
     .speech-bubble::after {
@@ -102,6 +104,19 @@
       padding: 1rem;
       margin-bottom: 2rem;
     }
+
+    /* Responsive Navigation */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .speech-bubble {
+        left: 160px;
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -114,11 +129,9 @@
   </nav>
 
   <div class="container">
+    <!-- ✅ Use your saved image here -->
     <div class="intro-scene">
-      <img
-        class="girl"
-        src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
-        alt="Girl Avatar" />
+      <img class="girl" src="assets/pixelme.jpg" alt="Girl walking in" />
 
       <div class="speech-bubble">
         Hello, I'm Supriya.<br />
