@@ -20,12 +20,13 @@
       position: absolute;
       bottom: 0;
       left: -150px;
-      animation: walkIn 3.5s ease-out forwards;
+      opacity: 0;
+      animation: walkIn 3s ease-out forwards;
     }
 
     @keyframes walkIn {
       0% { left: -150px; opacity: 0; }
-      30% { opacity: 1; }
+      50% { left: 50px; opacity: 1; }
       100% { left: 80px; opacity: 1; }
     }
 
@@ -42,7 +43,7 @@
       backdrop-filter: blur(12px);
       opacity: 0;
       animation: showBubble 1s ease-in forwards;
-      animation-delay: 3.5s;
+      animation-delay: 3s;
     }
 
     @keyframes showBubble {
@@ -74,12 +75,13 @@
   </nav>
 
   <div class="container">
-    <!-- Girl Animation Scene -->
+    <!-- Girl Avatar (use a reliable static image) -->
     <div class="intro-scene">
-      <!-- ✅ Working animated walking girl GIF -->
-      <img class="girl" src="https://upload.wikimedia.org/wikipedia/commons/8/88/Walking_girl.gif" alt="Girl walking" />
+      <img
+        class="girl"
+        src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
+        alt="Girl Avatar" />
 
-      <!-- Speech Bubble -->
       <div class="speech-bubble">
         Hello, I'm Supriya.<br />
         Welcome to my personal portfolio website.
