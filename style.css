@@ -11,22 +11,13 @@ body {
   display: flex;
   flex-direction: column;
   color: #fff;
-  background: linear-gradient(135deg, #321d5c, #2980b9, #2ecc71);
-  background-size: 400% 400%;
-  animation: bgShift 15s ease infinite;
+  background: linear-gradient(135deg, #2e1a47, #154360, #138d75); /* Navy → Blue → Teal */
   background-attachment: fixed;
   overflow-x: hidden;
   position: relative;
 }
 
-/* Background animation */
-@keyframes bgShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Glassmorphism effect overlay (soft light circles) */
+/* Background overlay for soft light bubbles */
 body::before {
   content: "";
   position: absolute;
@@ -66,7 +57,7 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* Page Content Layout */
+/* Page Layout */
 .container {
   max-width: 960px;
   margin: 2rem auto;
@@ -79,10 +70,10 @@ nav a:hover {
   position: relative;
 }
 
-/* Glass Card */
+/* Glassmorphic Card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
