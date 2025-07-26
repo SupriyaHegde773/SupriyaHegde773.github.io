@@ -1,0 +1,235 @@
+about.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="glass-card">
+      <h2>About Me</h2>
+      <p>I’m a passionate developer who enjoys building user-friendly applications. My focus is on front-end development, but I’m always eager to learn full-stack concepts.</p>
+    </div>
+  </div>
+</body>
+</html>
+----------------------------------------------
+contact.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="glass-card">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:supriya@example.com">supriya@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/supriyahegde773" target="_blank">github.com/supriyahegde773</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/supriyahegde" target="_blank">linkedin.com/in/supriyahegde</a></p>
+    </div>
+  </div>
+</body>
+</html>------------------------------
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supriya | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Hello, I'm Supriya 👋</h1>
+    <p>Welcome to my personal portfolio website.</p>
+
+    <div class="glass-card">
+      <h2>Experience</h2>
+      <p>Junior Developer at XYZ Corp (2023–Present)</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>Education</h2>
+      <p>Bachelor of Technology in Computer Science</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>Skills</h2>
+      <ul>
+        <li>React, JavaScript, HTML, CSS</li>
+        <li>Python, SQL</li>
+        <li>Version Control (Git)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>-------------------
+projects.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="glass-card">
+      <h2>SkillSpark</h2>
+      <p>A React Native app that aggregates courses from Coursera, edX, and Udemy with a personalized learning roadmap.</p>
+      <a href="https://github.com/yourusername/skillspark" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="glass-card">
+      <h2>MyLearningApp</h2>
+      <p>An app with interest quiz, learning preferences, and course suggestions. Built with React Native + AWS Amplify.</p>
+    </div>
+  </div>
+</body>
+</html>-------------------
+resume.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="glass-card">
+      <h2>My Resume</h2>
+      <embed src="assets/Supriya.Resume.pdf" type="application/pdf" width="100%" height="600px" />
+      <p><a href="assets/Supriya.Resume.pdf" download>Download Resume</a></p>
+    </div>
+  </div>
+</body>
+</html>----------------
+style.css
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #1e1e2f, #2d2d44);
+  color: #ffffff;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.2rem 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffe7;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+p, li, a {
+  color: #dddddd;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+a {
+  color: #00ffe7;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}--------------------------------
+
