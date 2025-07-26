@@ -3,28 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <title>Supriya | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #1e2a38, #0f1724);
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
 
     .intro-scene {
       position: relative;
       height: 280px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
       overflow: hidden;
-      margin-top: 2rem;
     }
 
     .girl {
+      width: 120px;
       position: absolute;
       bottom: 0;
       left: -150px;
-      width: 120px;
       opacity: 0;
       animation: walkIn 3s forwards ease-out;
     }
@@ -34,7 +54,7 @@
         left: -150px;
         opacity: 0;
       }
-      30% {
+      40% {
         opacity: 1;
       }
       100% {
@@ -52,7 +72,7 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 16px;
       padding: 1rem 1.5rem;
-      color: #fff;
+      color: white;
       font-size: 1rem;
       backdrop-filter: blur(10px);
       opacity: 0;
@@ -75,24 +95,26 @@
       border-right-color: rgba(255, 255, 255, 0.3);
     }
 
-    .container h1,
-    .container > p {
-      display: none;
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Resume</a>
+    <a href="#">Contact</a>
   </nav>
 
   <div class="container">
     <div class="intro-scene">
-      <!-- ✅ Use a reliable image (you can download and host locally too) -->
       <img
         class="girl"
         src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
