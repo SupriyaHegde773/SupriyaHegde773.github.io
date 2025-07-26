@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Projects</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     .tab-buttons {
       display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
 
     .tab-buttons button {
-      padding: 0.5rem 1.2rem;
+      padding: 0.5rem 1rem;
       border: none;
       background: rgba(255, 255, 255, 0.08);
       color: #fff;
@@ -22,7 +22,6 @@
       backdrop-filter: blur(8px);
       border-radius: 8px;
       font-weight: 500;
-      transition: 0.3s ease;
     }
 
     .tab-buttons button.active {
@@ -40,31 +39,6 @@
     .tab-content.active {
       display: flex;
     }
-
-    .glass-card img.project-image {
-      width: 100%;
-      max-height: 150px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-
-    .glass-card h2 {
-      text-align: center;
-      font-size: 1.3rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .glass-card p {
-      text-align: center;
-      font-size: 0.95rem;
-    }
-
-    @media screen and (max-width: 600px) {
-      .glass-card {
-        padding: 1.2rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -77,7 +51,7 @@
   </nav>
 
   <div class="container">
-    <h1 style="text-align: center; margin-bottom: 1rem;">Projects</h1>
+    <h1 style="text-align: center;">Projects</h1>
 
     <div class="tab-buttons">
       <button onclick="showTab('academic')" id="academicTab" class="active">Academic Projects</button>
@@ -86,59 +60,59 @@
 
     <div id="academic" class="tab-content active">
       <div class="glass-card">
-        <img src="assets/biometric.jpeg" alt="Biometric Watermarking" class="project-image">
+        <img src="assets/biometric.jpeg" class="project-image" alt="Biometric Watermarking" />
         <h2>Biometric Watermarking using Deep Learning</h2>
         <p>Embedded fingerprint data into iris images using DWT, DCT, and SVD for secure, attack-resistant watermarking in digital ID, medical records, and copyright protection.</p>
       </div>
 
       <div class="glass-card">
-        <img src="assets/social media analytics.jpg" alt="Social Media Analytics" class="project-image">
-        <h2>Real-Time Social Media Analytics Pipeline</h2>
-        <p>Built a pipeline for real-time social sentiment analysis and topic modeling. Optimized using Grid Search & Flask API for deployment.</p>
+        <img src="assets/social media analytics.jpg" class="project-image" alt="Social Media Analytics" />
+        <h2>Real-Time Social Media Analytics</h2>
+        <p>Built a pipeline for real-time sentiment analysis and topic modeling. Optimized via Grid Search and deployed using Flask API.</p>
       </div>
 
       <div class="glass-card">
-        <img src="assets/brain tumor.png" alt="Brain Tumor Detection" class="project-image">
+        <img src="assets/brain tumor.png" class="project-image" alt="Brain Tumor Detection" />
         <h2>Brain Tumor Detection using ML</h2>
-        <p>Developed a model with OpenCV preprocessing to detect tumors from MRI scans. GUI built with PyQt5 for interactive prediction.</p>
+        <p>Used CNNs to classify brain tumors from MRI images. Integrated PyQt5 GUI for predictions with OpenCV preprocessing.</p>
       </div>
 
       <div class="glass-card">
-        <img src="assets/Movie booking.jpg" alt="Movie Booking System" class="project-image">
+        <img src="assets/Movie booking.jpg" class="project-image" alt="Movie Booking" />
         <h2>Movie Ticket Booking System</h2>
-        <p>Created a MySQL system with full CRUD, user login, and movie schedule management for streamlined ticket booking.</p>
+        <p>Django + MySQL system with full CRUD, user login, and movie schedule management for booking tickets.</p>
       </div>
     </div>
 
     <div id="personal" class="tab-content">
       <div class="glass-card">
-        <img src="assets/food-label.jpg" alt="Food Label Design" class="project-image">
-        <h2>Label Design for Local Food Business</h2>
-        <p>Created eye-catching and informative packaging labels using Canva for a small food business, focusing on brand identity and clarity.</p>
+        <img src="assets/food-label.jpg" class="project-image" alt="Food Label" />
+        <h2>Label Design for Food Business</h2>
+        <p>Designed branding and clear food packaging labels using Canva for a local business.</p>
       </div>
 
       <div class="glass-card">
-        <img src="assets/invitations.jpg" alt="Event Invitation Design" class="project-image">
+        <img src="assets/invitations.jpg" class="project-image" alt="Invitations" />
         <h2>Hostel Event Invitations</h2>
-        <p>Designed digital and print invitations for college hostel events, enhancing event engagement through aesthetic layouts and creative visuals.</p>
+        <p>Designed digital and print invitations for college hostel events using Canva and Adobe tools.</p>
       </div>
 
       <div class="glass-card">
-        <img src="assets/typing-game.jpg" alt="Typing Game" class="project-image">
+        <img src="assets/typing-game.jpg" class="project-image" alt="Typing Game" />
         <h2>Typing Speed Game</h2>
-        <p>A web-based typing game to improve typing accuracy and speed. Built using HTML with real-time feedback</p>
+        <p>Fun browser game built in HTML/CSS/JS to help improve typing accuracy and speed in real-time.</p>
       </div>
 
       <div class="glass-card">
-        <img src="assets/memory-game.jpg" alt="Memory Game" class="project-image">
-        <h2>Memory Tile Matching Game</h2>
-        <p>Interactive memory game built using HTML and CSS animations where players match pairs of tiles. Great for brain training!</p>
+        <img src="assets/memory-game.jpg" class="project-image" alt="Memory Game" />
+        <h2>Memory Matching Game</h2>
+        <p>Flip-card matching game to test and train memory. Built using JavaScript logic and CSS animations.</p>
       </div>
 
       <div class="glass-card">
-        <img src="assets/flappy-ginger.jpg" alt="Flappy Ginger Game" class="project-image">
+        <img src="assets/flappy-ginger.jpg" class="project-image" alt="Flappy Gingerbread" />
         <h2>Flappy Gingerbread Game</h2>
-        <p>Inspired by Flappy Bird, but with a gingerbread escaping the milk obstacles.</p>
+        <p>Inspired by Flappy Bird — dodge milk bottles with a flying gingerbread. Created using JS canvas.</p>
       </div>
     </div>
   </div>
@@ -146,9 +120,9 @@
   <script>
     function showTab(tab) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      document.querySelector(`#${tab}`).classList.add('active');
+      document.getElementById(tab).classList.add('active');
       document.querySelectorAll('.tab-buttons button').forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`#${tab}Tab`).classList.add('active');
+      document.getElementById(tab + 'Tab').classList.add('active');
     }
   </script>
 </body>
