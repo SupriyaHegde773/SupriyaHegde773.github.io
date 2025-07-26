@@ -8,10 +8,11 @@
     .intro-scene {
       display: flex;
       align-items: flex-end;
-      justify-content: center;
+      justify-content: flex-start;
       height: 300px;
       position: relative;
       overflow: hidden;
+      margin-bottom: 2rem;
     }
 
     .girl {
@@ -19,28 +20,29 @@
       position: absolute;
       bottom: 0;
       left: -150px;
-      animation: walkIn 4s ease-out forwards;
+      animation: walkIn 3.5s ease-out forwards;
     }
 
     @keyframes walkIn {
       0% { left: -150px; opacity: 0; }
-      40% { left: 50px; opacity: 1; }
-      100% { left: 80px; }
+      30% { opacity: 1; }
+      100% { left: 80px; opacity: 1; }
     }
 
     .speech-bubble {
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 16px;
       padding: 1rem 1.5rem;
       color: #fff;
       max-width: 300px;
       position: absolute;
       left: 220px;
-      bottom: 110px;
+      bottom: 120px;
       backdrop-filter: blur(12px);
       opacity: 0;
-      animation: showBubble 1s ease-in 3.5s forwards;
+      animation: showBubble 1s ease-in forwards;
+      animation-delay: 3.5s;
     }
 
     @keyframes showBubble {
@@ -72,11 +74,11 @@
   </nav>
 
   <div class="container">
+    <!-- Girl Animation Scene -->
     <div class="intro-scene">
-      <!-- Simple animated girl SVG -->
-      <img class="girl" src="https://www.svgrepo.com/show/522544/woman-avatar.svg" alt="Girl Avatar" />
+      <!-- Replace below image with a working animated girl walking GIF -->
+      <img class="girl" src="https://media.tenor.com/b1N4kIFPBtcAAAAi/girl-walk.gif" alt="Girl walking" />
 
-      <!-- Speech Bubble -->
       <div class="speech-bubble">
         Hello, I'm Supriya.<br />
         Welcome to my personal portfolio website.
