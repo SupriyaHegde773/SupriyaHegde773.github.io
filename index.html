@@ -5,55 +5,71 @@
   <title>Supriya | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
     .intro-scene {
+      position: relative;
+      height: 280px;
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;
-      height: 300px;
-      position: relative;
       overflow: hidden;
-      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
 
     .girl {
-      width: 120px;
       position: absolute;
       bottom: 0;
       left: -150px;
+      width: 120px;
       opacity: 0;
-      animation: walkIn 3s ease-out forwards;
+      animation: walkIn 3s forwards ease-out;
     }
 
     @keyframes walkIn {
-      0% { left: -150px; opacity: 0; }
-      50% { left: 50px; opacity: 1; }
-      100% { left: 80px; opacity: 1; }
+      0% {
+        left: -150px;
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        left: 80px;
+        opacity: 1;
+      }
     }
 
     .speech-bubble {
-      background: rgba(255, 255, 255, 0.15);
+      position: absolute;
+      bottom: 120px;
+      left: 220px;
+      max-width: 300px;
+      background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 16px;
       padding: 1rem 1.5rem;
       color: #fff;
-      max-width: 300px;
-      position: absolute;
-      left: 220px;
-      bottom: 120px;
-      backdrop-filter: blur(12px);
+      font-size: 1rem;
+      backdrop-filter: blur(10px);
       opacity: 0;
-      animation: showBubble 1s ease-in forwards;
+      animation: showBubble 1s forwards;
       animation-delay: 3s;
     }
 
     @keyframes showBubble {
-      to { opacity: 1; }
+      to {
+        opacity: 1;
+      }
     }
 
     .speech-bubble::after {
       content: "";
       position: absolute;
-      left: -12px;
+      left: -10px;
       bottom: 20px;
       border: 10px solid transparent;
       border-right-color: rgba(255, 255, 255, 0.3);
@@ -75,8 +91,8 @@
   </nav>
 
   <div class="container">
-    <!-- Girl Avatar (use a reliable static image) -->
     <div class="intro-scene">
+      <!-- ✅ Use a reliable image (you can download and host locally too) -->
       <img
         class="girl"
         src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
