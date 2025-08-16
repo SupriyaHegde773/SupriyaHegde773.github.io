@@ -15,7 +15,7 @@ body {
   background-attachment: fixed;
   overflow-x: hidden;
   position: relative;
-  padding: 20px;
+  padding: 0;
 }
 
 /* Background overlay */
@@ -33,43 +33,56 @@ body::before {
   filter: blur(80px);
 }
 
-/* Consistent Navigation Bar */
+/* Navigation Bar - Horizontal Style */
 nav {
   display: flex;
   justify-content: center;
-  gap: 0.6rem;
-  padding: 0.8rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border-radius: 10px;
-  z-index: 1;
-  margin-bottom: 2rem;
+  padding: 1rem 0;
   width: 100%;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav a {
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.1rem;
   transition: all 0.3s ease;
   font-size: 0.95rem;
   white-space: nowrap;
+  position: relative;
 }
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 70%;
 }
 
 /* Page Layout */
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   position: relative;
   z-index: 1;
   width: 100%;
@@ -161,13 +174,12 @@ h1 {
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
-    padding: 15px;
+    padding: 0;
   }
   
   nav {
     flex-wrap: wrap;
-    gap: 0.6rem;
-    padding: 0.8rem;
+    padding: 0.8rem 0.5rem;
   }
   
   nav a {
