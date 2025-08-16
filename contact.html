@@ -5,6 +5,46 @@
   <title>Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .social-icon {
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      transform: scale(1.1);
+    }
+    
+    @media (max-width: 768px) {
+      .social-icons {
+        gap: 1.5rem;
+      }
+      
+      .social-icon {
+        width: 42px;
+        height: 42px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .social-icons {
+        gap: 1.2rem;
+      }
+      
+      .social-icon {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -20,13 +60,13 @@
     <div class="glass-card">
       <div class="social-icons">
         <a href="mailto:supriyahegde71@gmail.com" target="_blank">
-          <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Gmail">
+          <img src="https://img.icons8.com/color/48/gmail-new.png" class="social-icon" alt="Gmail">
         </a>
         <a href="https://www.linkedin.com/in/supriya-hegde07" target="_blank">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="social-icon" alt="LinkedIn">
         </a>
         <a href="https://github.com/supriyahegde773" target="_blank">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="social-icon" alt="GitHub">
         </a>
       </div>
     </div>
