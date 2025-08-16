@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
@@ -21,7 +21,7 @@
       background-attachment: fixed;
       overflow-x: hidden;
       position: relative;
-      padding: 30px;
+      padding: 20px;
     }
 
     body::before {
@@ -41,27 +41,33 @@
     nav {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem 0;
+      gap: 1rem;
+      padding: 1rem;
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
       border-radius: 10px;
       z-index: 1;
       margin-bottom: 2rem;
+      width: 100%;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     nav a {
       color: #ffffff;
       font-weight: 600;
       text-decoration: none;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1rem;
       border-radius: 6px;
-      transition: background 0.3s ease;
-      font-size: 1rem;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      white-space: nowrap;
     }
 
     nav a:hover {
       background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
     }
 
     .container {
@@ -69,10 +75,12 @@
       margin: 0 auto;
       position: relative;
       z-index: 1;
+      width: 100%;
+      padding: 0 20px;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin-bottom: 1rem;
       text-align: center;
       font-weight: 600;
@@ -80,7 +88,7 @@
 
     .subtitle {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       font-size: 1.1rem;
       opacity: 0.9;
     }
@@ -92,12 +100,11 @@
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      padding: 2rem;
-      max-width: 700px;
+      padding: 1.8rem;
       width: 100%;
       color: #fff;
       transition: transform 0.3s ease;
-      margin: 0 auto 2rem auto;
+      margin-bottom: 1.5rem;
     }
 
     .glass-card:hover {
@@ -106,14 +113,15 @@
 
     .glass-card h2 {
       font-size: 1.5rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
       font-weight: 600;
     }
 
     .glass-card p {
       font-size: 1rem;
       line-height: 1.6;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
+      text-align: left;
     }
 
     .glass-card ul {
@@ -122,33 +130,57 @@
     }
 
     .glass-card li {
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
       font-size: 1rem;
       line-height: 1.5;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .glass-card li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fff;
     }
 
     @media (max-width: 768px) {
       body {
-        padding: 20px;
+        padding: 15px;
+      }
+      
+      nav {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        padding: 0.8rem;
+      }
+      
+      nav a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
       }
       
       h1 {
         font-size: 2rem;
       }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        padding: 0.8rem;
-      }
-
-      nav a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-      }
-
+      
       .glass-card {
         padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
       }
     }
   </style>
@@ -167,11 +199,28 @@
     <p class="subtitle">Welcome to my personal portfolio website.</p>
     
     <div class="glass-card">
-      <p>I'm a driven and versatile software developer with a passion for creating clean, intuitive, and impactful digital experiences. My work reflects a commitment to quality, curiosity, and continuous improvement.</p>
-      <br>
-      <p>I thrive on building innovative solutions and enjoy diving into new technologies, tools, and frameworks. I've completed multiple projects involving machine learning, combining analytical thinking with creative problem-solving, and I'm actively expanding my capabilities in full-stack development.</p>
-      <br>
-      <p>Beyond coding, I bring the same discipline and energy to athletics and teamwork, and I'm always eager to collaborate, exchange ideas, and grow alongside others.</p>
+      <h2>💼 Experience</h2>
+      <p>Web Developer Intern at Metricdust LLC</p>
+      <p>Apr/2025 – Jul/2025</p>
+    </div>
+    
+    <div class="glass-card">
+      <h2>🛠️ Skills</h2>
+      <ul>
+        <li>Programming: Python, Java</li>
+        <li>Web: ReactJS, HTML, Django, AngularJS</li>
+        <li>Version Control: Git</li>
+        <li>Machine Learning: Scikit-learn, TensorFlow, MATLAB, Pandas, NumPy</li>
+        <li>Image Processing: OpenCV</li>
+        <li>Databases: MySQL</li>
+        <li>Tools: VSCode, GitHub, PyQt5, Canva</li>
+      </ul>
+    </div>
+
+    <div class="glass-card">
+      <h2>🎓 Education</h2>
+      <p>Bachelor of Engineering in Computer Science</p>
+      <p>GPA: 3.6</p>
     </div>
   </div>
 </body>
