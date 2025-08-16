@@ -47,6 +47,7 @@
       backdrop-filter: blur(10px);
       border-radius: 10px;
       z-index: 1;
+      margin-bottom: 2rem;
     }
 
     nav a {
@@ -109,6 +110,7 @@
       font-size: 0.95rem;
       line-height: 1.5;
       margin-bottom: 0.4rem;
+      text-align: left;
     }
 
     .glass-card ul {
@@ -122,8 +124,17 @@
     }
 
     @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+      
       h1 {
         font-size: 2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
       }
 
       .glass-card {
@@ -142,32 +153,25 @@
   </nav>
 
   <div class="container">
-    <br><h1>Hello, I'm Supriya 👋</h1>
+    <h1>Hello, I'm Supriya 👋</h1>
     <p>Welcome to my personal portfolio website.</p>
     
     <div class="glass-card">
-      <h2>💼 Experience</h2>
-      <p>Web Developer Intern at Metricdust LLC</p>
-      <p>Apr/2025 – Jul/2025</p>
+      <h2>About Me</h2>
+      <p>I'm a driven and versatile software developer with a passion for creating clean, intuitive, and impactful digital experiences. My work reflects a commitment to quality, curiosity, and continuous improvement.</p>
+      <br><p>I thrive on building innovative solutions and enjoy diving into new technologies, tools, and frameworks. I've completed multiple projects involving machine learning, combining analytical thinking with creative problem-solving, and I'm actively expanding my capabilities in full-stack development.</p>
+      <br><p>Beyond coding, I bring the same discipline and energy to athletics and teamwork, and I'm always eager to collaborate, exchange ideas, and grow alongside others.</p>
     </div>
     
     <div class="glass-card">
-      <h2>🛠️ Skills</h2>
+      <h2>Quick Highlights</h2>
       <ul>
-        <li>Programming: Python, Java</li>
-        <li>Web: ReactJS, HTML, Django, AngularJS</li>
-        <li>Version Control: Git</li>
-        <li>Machine Learning: Scikit-learn, TensorFlow, MATLAB, Pandas, NumPy</li>
-        <li>Image Processing: OpenCV</li>
-        <li>Databases: MySQL</li>
-        <li>Tools: VSCode, GitHub, PyQt5, Canva</li>
+        <li>Web Developer with experience in ReactJS and Django</li>
+        <li>Skilled in Machine Learning and Data Analysis</li>
+        <li>Strong problem-solving abilities</li>
+        <li>Passionate about creating user-friendly applications</li>
+        <li>Continuous learner and technology enthusiast</li>
       </ul>
-    </div>
-
-    <div class="glass-card">
-      <h2>🎓 Education</h2>
-      <p>Bachelor of Engineering in Computer Science</p>
-      <p>GPA: 3.6</p>
     </div>
   </div>
 </body>
